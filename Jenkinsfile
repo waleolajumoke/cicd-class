@@ -19,10 +19,10 @@ pipeline{
 
         stage("Build docker image"){
             steps{
-                sh "docker build \
+                sh """docker build \
                 -t ${IMAGE_NAME}:${BUILD_NUMBER}\
                 -t ${IMAGE_NAME}:latest .
-                "
+                """
             }
         }
 
